@@ -2,20 +2,23 @@
 
 # How to use
 
-Each directory in `experiments` represents an experiment. Experiments are structured as follows:
+Each directory in `experiments` represents an experiment. Experiments are structured like so:
 
 ```
-experiments
-└── <experiment-name>
-    └── clusters
-        ├── <cluster-name>
-        │   └── apps
-        │       ├── <app-manifest>
-        │       └── <app-manifest>
-        └── <cluster-name>
-            └── apps
-                ├── <app-manifest>
-                └── <app-manifest>
+experiments/
+└── <experiment>
+    ├── clusters
+    │   └── <cluster>
+    │       └── apps
+    │           ├── <app>
+    │           │   ├── <manifest>
+    │           │   └── <manifest>
+    │           ├── <app>
+    │           │   └── Chart.yaml
+    │           └── <app>
+    │               ├── <manifest>
+    │               └── <manifest>
+    └── README.md
 ```
 
 `<experiment-name>` represents a named experiment, such as `rook-external`. `<cluster-name>` represents a cluster logical name (not necessarily a Kubernetes context). `<app-manifest>` represents a single ArgoCD Application resource.
